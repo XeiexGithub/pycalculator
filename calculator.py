@@ -6,7 +6,7 @@ import customtkinter as ctk
 
 calculation_string = ""
 
-ctk.set_appearance_mode("System")
+ctk.set_appearance_mode("dark")
 
 calculator = ctk.CTk()
 
@@ -27,6 +27,7 @@ def add_to_calculator(number):
         textbox.insert(ctk.INSERT,number)
 
 def eval_calculation():
+    global calculation_string
     try:
         result = str(eval(calculation_string))
         textbox.insert(ctk.INSERT,result)
